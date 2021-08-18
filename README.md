@@ -1,0 +1,2 @@
+# hospital-odoo
+odoohosptalMS  addons
