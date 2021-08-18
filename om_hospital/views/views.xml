@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+
+
+    <!-- Top menu item -->
+    <menuitem
+            name="Hospital"
+            id="om_hospital.menu_root"
+            sequence="1"  />
+
+    <menuitem
+            name="Doctor"
+            id="om_hospital.menu_doctor"
+            parent="om_hospital.menu_root"
+            sequence="1" />
+
+  </data>
+</odoo>

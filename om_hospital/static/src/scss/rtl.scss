@@ -1,0 +1,42 @@
+* {
+
+   direction: rtl !important;
+}
+
+.o_main_navbar > ul,
+.o_main_navbar > .o_menu_brand,
+.o_main_navbar > ul,
+.o_main_navbar > ul > li{
+
+    float: right;
+}
+
+.o_main_navbar > ul.o_menu_systray{
+
+    float: left;
+}
+
+.o_searchview .o_searchview_input_container .o_searchview_facet{
+
+    direction: ltr !important;
+}
+
+.dropdown-menu .dropdown-item,
+.o_input, .o_search_panel,
+.table-responsive,
+.oe_title,
+ table{
+
+   text-align: right !important;
+}
+
+.o_form_view .o_form_statusbar > .o_statusbar_status{
+
+    margin-left: unset !important;
+    flex-flow: unset !important;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu.wider{
+
+    width: unset;
+}

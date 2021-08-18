@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="om_hospital.booking_tree">
+            <field name="name">om_hospital.booking.tree</field>
+            <field name="model">om_hospital.booking</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'"
+                        decoration-success="state == 'done'" decoration-danger="state == 'confirm'">
+                    <field name="date" />
+                    <field name="doctor_id" />
+                    <field name="patient_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="booking_calendar" model="ir.ui.view">
+            <field name="name">om_hospital.booking.calendar</field>
+            <field name="model">om_hospital.booking</field>
+            <field name="arch" type="xml">
+                <calendar string="Booking Calendar" date_start="date" color="patient_id"  mode="day" quick_add="True">
+                    <field name="date"/>
+                    <field name="doctor_id"/>
+                    <field name="patient_id" />
+                    <field name="state" />
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="om_hospital.booking_form">
+            <field name="name">om_hospital.booking.form</field>
+            <field name="model">om_hospital.booking</field>
+            <field name="arch" type="xml">
+                <form string="Booking Form">
+                    <header>
+                        <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" states="draft"/>
+                        <button name="action_done" type="object" string="Done" class="oe_highlight" attrs="{'invisible': [('state','!=', 'confirm')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="date" default_focus="1" placeholder="On Date"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="doctor_id" />
+                            <field name="patient_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="om_hospital.appointment_search" model="ir.ui.view">
+            <field name="name">om_hospital.booking.search</field>
+            <field name="model">om_hospital.booking</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="date" filter_domain="[('date','ilike',self)]"/>
+                    <separator/>
+                    <filter string="Confirm" name="confirm" domain="[('state', '=', 'confirm')]"/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="om_hospital.booking_action" model="ir.actions.act_window" >
+          <field name="name">Appointment Booking</field>
+          <field name="res_model">om_hospital.booking</field>
+          <field name="view_mode">tree,calendar,form</field>
+          <field name="help" type="xml">
+              <p>
+                  Create new Booking
+              </p>
+          </field>
+        </record>
+
+        <menuitem
+            name="Appointment"
+            id="om_hospital.booking"
+            parent="om_hospital.menu_root"
+            action="om_hospital.booking_action"
+        />
+    </data>
+</odoo>

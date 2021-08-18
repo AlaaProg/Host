@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="AppsMenu">
+        <t t-jquery=".dropdown .full" t-operation="replace">
+            <a class="full" data-toggle="dropdown" data-display="static" href="#" accesskey="h" >
+                <img src='/om_hospital/static/src/img/logo.png' />
+            </a>
+        </t>
+    </t>
+</templates>

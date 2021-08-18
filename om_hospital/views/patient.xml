@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="om_hospital.patients_form">
+            <field name="name">om_hospital.patients.form</field>
+            <field name="model">om_hospital.patients</field>
+            <field name="arch" type="xml">
+                <form string="Patients Form">
+                    <sheet>
+                        <group>
+                            <field name="fullname"/>
+                            <field name="phone"/>
+                            <field name="gender"/>
+                            <field name="age"/>
+                        </group>
+                        <notebook>
+                            <page string="Appointment">
+                                <field name="booking_ids" widget="one2many">
+                                    <tree editable="bottom">
+                                        <field name="date" />
+                                        <field name="doctor_id" />
+                                        <field name="patient_id" invisible="1" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="om_hospital.patients_tree">
+            <field name="name">om_hospital.patients.tree</field>
+            <field name="model">om_hospital.patients</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fullname" />
+                    <field name="phone" widget="phone" />
+                    <field name="gender" />
+                    <field name="age" />
+                    <field name="booking_ids" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="om_hospital.patients_search" model="ir.ui.view">
+            <field name="name">om_hospital.patients.search</field>
+            <field name="model">om_hospital.patients</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="fullname"/>
+                    <field name="age"/>
+                    <field name="phone" filter_domain="[('phone','ilike',self)]"/>
+                    <separator/>
+                    <filter string="Male" name="male" domain="[('gender', '=', 'male')]"/>
+                    <filter string="Kid" name="kid" domain="[('gender', '=', 'kid')]"/>
+                    <filter string="Female" name="female" domain="[('gender', '=', 'female')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="om_hospital.patient_action" model="ir.actions.act_window" >
+          <field name="name">Hospital Patient</field>
+          <field name="res_model">om_hospital.patients</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="xml">
+              <p>
+                  Create new Patient
+              </p>
+          </field>
+        </record>
+
+        <menuitem
+            name="Patients"
+            id="om_hospital.patient"
+            parent="om_hospital.menu_root"
+            action="om_hospital.patient_action"
+        />
+    </data>
+</odoo>

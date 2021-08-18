@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="om_hospital.doctors_kanban">
+            <field name="name">om_hospital.doctors.kanban</field>
+            <field name="model">om_hospital.doctors</field>
+            <field name="arch" type="xml" >
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click oe_kanban_card mb4" style="width: 190px;">
+                                <field name="avatar" widget="image" />
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">
+                                         D.<field name="fullname"/>
+                                    </h4>
+                                    <p>Phone <span class="text-primary"><field name="phone"/></span> </p>
+                                    <p><field name="majors_ids" widget="many2many_tags"/></p>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="om_hospital.doctors_form">
+            <field name="name">om_hospital.doctors.form</field>
+            <field name="model">om_hospital.doctors</field>
+            <field name="arch" type="xml">
+                <form string="Doctor Form">
+                    <sheet>
+                        <field name="avatar" widget="image" class="oe_avatar oe_left mr8" />
+                        <div class="oe_title ">
+                            <h1>
+                                <field name="fullname" default_focus="1" placeholder="Full Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="phone" placeholder="Phone Name" widget="phone"/>
+                            <field name="email" placeholder="E-mail address" widget="email" />
+                        </group>
+                        <notebook>
+                            <page string="Appointemnt">
+                                <field name="booking_ids" widget="one2many" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="date" />
+                                        <field name="doctor_id" invisible="1"/>
+                                        <field name="patient_id" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Majors">
+                                <field name="majors_ids" placeholder="Majors Doctor" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="om_hospital.doctors_search" model="ir.ui.view">
+            <field name="name">om_hospital.doctors.search</field>
+            <field name="model">om_hospital.doctors</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="fullname"/>
+                    <field name="phone" filter_domain="[('phone','ilike',self)]"/>
+                    <field name="majors_ids" filter_domain="[('majors_ids', 'ilike', self)]"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By" >
+                        <filter string="User" name="user" groups="om_hospital.group_hospital_admin" context="{'group_by': 'user_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="om_hospital.doctors_tree">
+            <field name="name">om_hospital.doctors.tree</field>
+            <field name="model">om_hospital.doctors</field>
+            <field name="arch" type="xml">
+                <tree>
+                  <field name="fullname"/>
+                  <field name="phone" />
+                  <field name="majors_ids" />
+                  <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="om_hospital.doctor_action" model="ir.actions.act_window" >
+          <field name="name">Hospital Doctor</field>
+          <field name="res_model">om_hospital.doctors</field>
+          <field name="view_mode">kanban,tree,form</field>
+          <field name="help" type="xml">
+              <p>
+                  Create new Doctor
+              </p>
+          </field>
+        </record>
+
+        <menuitem
+            name="List Doctors"
+            id="om_hospital.doctor"
+            parent="om_hospital.menu_doctor"
+            action="om_hospital.doctor_action"
+        />
+    </data>
+
+</odoo>

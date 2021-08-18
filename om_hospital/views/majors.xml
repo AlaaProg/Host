@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="om_hospital.majors_form">
+            <field name="name">om_hospital.majors.form</field>
+            <field name="model">om_hospital.doctor_majors</field>
+            <field name="arch" type="xml">
+                <form string="Major Form">
+                    <sheet>
+
+                        <group>
+                            <field name="name" placeholder="Name" />
+                            <field name="description" placeholder="Description" />
+                        </group>
+<!--                        <group string="Doctors">-->
+<!--                            <field name="doctors_ids" placeholder="Majors Doctor" widget="many2many_tags"/>-->
+<!--                        </group>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="om_hospital.majors_action" model="ir.actions.act_window" >
+          <field name="name">Hospital Majors</field>
+          <field name="res_model">om_hospital.doctor_majors</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="xml">
+              <p>
+                  Create new Doctor Major
+              </p>
+          </field>
+        </record>
+
+        <menuitem
+            name="Majors"
+            id="om_hospital.doctor_majors"
+            parent="om_hospital.menu_doctor"
+            action="om_hospital.majors_action"
+            groups="om_hospital.group_hospital_admin"
+        />
+    </data>
+</odoo>

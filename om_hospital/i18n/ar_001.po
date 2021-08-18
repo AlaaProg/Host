@@ -1,0 +1,463 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* om_hospital
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201212\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-13 21:25+0000\n"
+"PO-Revision-Date: 2021-01-13 21:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__age
+msgid "Age"
+msgstr "العمر"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+msgid "Appointemnt"
+msgstr "موعد"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__booking_ids
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__booking_ids
+#, python-format
+msgid "Appointemnts"
+msgstr "مواعيد"
+
+#. module: om_hospital
+#: model:ir.ui.menu,name:om_hospital.booking
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_form
+msgid "Appointment"
+msgstr "موعد"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.booking_action
+msgid "Appointment Booking"
+msgstr "حجز موعد"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__avatar
+#, python-format
+msgid "Avatar"
+msgstr "الصورة الرمزية"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.booking_calendar
+msgid "Booking Calendar"
+msgstr "تقويم المواعيد"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.booking_form
+msgid "Booking Form"
+msgstr "فورم الحجز"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_booking__state__cancel
+msgid "Cancelled"
+msgstr "ألغاء"
+
+#. module: om_hospital
+#: model:ir.module.category,description:om_hospital.module_category_hospital
+msgid "Category For Hospital"
+msgstr "تصنفات المستشفى"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_booking__state__confirm
+#: model_terms:ir.ui.view,arch_db:om_hospital.appointment_search
+#: model_terms:ir.ui.view,arch_db:om_hospital.booking_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: om_hospital
+#: model_terms:ir.actions.act_window,help:om_hospital.booking_action
+msgid "Create new Booking"
+msgstr "انشاء موعد"
+
+#. module: om_hospital
+#: model_terms:ir.actions.act_window,help:om_hospital.doctor_action
+msgid "Create new Doctor"
+msgstr "انشاء طبيب"
+
+#. module: om_hospital
+#: model_terms:ir.actions.act_window,help:om_hospital.majors_action
+msgid "Create new Doctor Major"
+msgstr "انشاء تخصص"
+
+#. module: om_hospital
+#: model_terms:ir.actions.act_window,help:om_hospital.patient_action
+msgid "Create new Patient"
+msgstr "انشاء مراجع"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__create_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__create_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__create_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__create_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__create_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__create_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.hospital_dashboard
+#: model:ir.ui.menu,name:om_hospital.menu_dashboard
+#: model_terms:ir.ui.view,arch_db:om_hospital.dashboard_form_view
+msgid "Dashboard"
+msgstr "الرئيسة"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Database"
+msgstr "قاعدة البيانات"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/majors.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__description
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__description
+#: model_terms:ir.ui.view,arch_db:om_hospital.majors_form
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_form
+#, python-format
+msgid "Description"
+msgstr "الوصف"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__display_name
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__display_name
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__display_name
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__doctor_id
+#: model:ir.ui.menu,name:om_hospital.menu_doctor
+msgid "Doctor"
+msgstr "طبيب"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+msgid "Doctor Form"
+msgstr "فورم الطبيب"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.board_doctors_tree
+#: model_terms:ir.ui.view,arch_db:om_hospital.dashboard_form_view
+msgid "Doctors"
+msgstr "الأطباء"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_booking__state__done
+#: model_terms:ir.ui.view,arch_db:om_hospital.booking_form
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_booking__state__draft
+#: model_terms:ir.ui.view,arch_db:om_hospital.appointment_search
+msgid "Draft"
+msgstr "قيد الانتار"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__email
+#, python-format
+msgid "E-mail Address"
+msgstr "البريد الاكثروني"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+msgid "E-mail address"
+msgstr "البريد الاكثروني"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Email"
+msgstr "البريد الاكثروني"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_patients__gender__female
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_search
+msgid "Female"
+msgstr "أنثى"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__fullname
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__fullname
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+#, python-format
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__gender
+msgid "Gender"
+msgstr "جنس"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: om_hospital
+#: model:ir.ui.menu,name:om_hospital.menu_root
+msgid "Hospital"
+msgstr "مستشفى"
+
+#. module: om_hospital
+#: model:res.groups,name:om_hospital.group_hospital_admin
+msgid "Hospital Admin"
+msgstr "ادمن المستشقى"
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_om_hospital_booking
+msgid "Hospital Booking"
+msgstr "حجوزات المستشفى"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.doctor_action
+#: model:res.groups,name:om_hospital.group_hospital_doctor
+msgid "Hospital Doctor"
+msgstr "اطباء المستشفى"
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_om_hospital_doctor_majors
+msgid "Hospital Doctor majors"
+msgstr "تخصصات اطباء المستشفى"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.majors_action
+msgid "Hospital Majors"
+msgstr "تخصصات المستشفى"
+
+#. module: om_hospital
+#: model:ir.module.category,name:om_hospital.module_category_hospital
+msgid "Hospital Management"
+msgstr "نطام ادارة المستشفى"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.patient_action
+msgid "Hospital Patient"
+msgstr "مراجع"
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_om_hospital_patients
+msgid "Hospital Patients"
+msgstr "المراجعين"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model,name:om_hospital.model_om_hospital_doctors
+#, python-format
+msgid "Hospital doctors"
+msgstr "اطباء المستشفى"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__id
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__id
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__id
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_patients__gender__kid
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_search
+msgid "Kid"
+msgstr "طفل"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking____last_update
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors____last_update
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors____last_update
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__write_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__write_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__write_uid
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__write_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__write_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__write_date
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: om_hospital
+#: model:ir.ui.menu,name:om_hospital.doctor
+msgid "List Doctors"
+msgstr "قائمة الأطباء"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Log in as superuser"
+msgstr ""
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Only employees can access this database. Please contact the administrator."
+msgstr "يمكن للموظفين فقط الوصول إلى قاعدة البيانات هذه. يرجى الاتصال بالمسؤول."
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Wrong login/password"
+msgstr "خطأ دخول / كلمة المرور"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.majors_form
+msgid "Major Form"
+msgstr "فورم اتخصص"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__majors_ids
+#: model:ir.ui.menu,name:om_hospital.doctor_majors
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+#, python-format
+msgid "Majors"
+msgstr "تخصصات"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+msgid "Majors Doctor"
+msgstr "تخصصات الطبيب"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__om_hospital_patients__gender__male
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_search
+msgid "Male"
+msgstr "ذكر"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__user_id
+#, python-format
+msgid "Manager User"
+msgstr "سكرتير"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/majors.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctor_majors__name
+#: model_terms:ir.ui.view,arch_db:om_hospital.majors_form
+#, python-format
+msgid "Name"
+msgstr "الاسم"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__date
+#: model_terms:ir.ui.view,arch_db:om_hospital.booking_form
+msgid "On Date"
+msgstr "في تاريخ"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid "Password"
+msgstr "الرمز السري"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__patient_id
+msgid "Patient"
+msgstr "مراجع"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.board_booking_calendar
+#: model_terms:ir.ui.view,arch_db:om_hospital.dashboard_form_view
+msgid "Patient Appointments"
+msgstr "مواعيد المراجعين"
+
+#. module: om_hospital
+#: model:ir.actions.act_window,name:om_hospital.board_patients_tree
+#: model:ir.ui.menu,name:om_hospital.patient
+#: model_terms:ir.ui.view,arch_db:om_hospital.dashboard_form_view
+msgid "Patients"
+msgstr "المراجعين"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.patients_form
+msgid "Patients Form"
+msgstr "فورم المراجعين"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_kanban
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_form
+msgid "Phone Name"
+msgstr "رقم الهاتف"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_doctors__phone
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_patients__phone
+#, python-format
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.web_custom_login
+msgid ""
+"Select <i class=\"fa fa-database\" role=\"img\" aria-label=\"Database\" "
+"title=\"Database\"/>"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_om_hospital_booking__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.constraint,message:om_hospital.constraint_om_hospital_doctors_email_unique
+#, python-format
+msgid "The email address must be unique"
+msgstr "هذا الاميل مستخدام"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/majors.py:0
+#: model:ir.model.constraint,message:om_hospital.constraint_om_hospital_doctor_majors_name_unique
+#, python-format
+msgid "The name must be unique"
+msgstr "هذا الاسم مستخدام"
+
+#. module: om_hospital
+#: code:addons/om_hospital/models/doctor.py:0
+#: model:ir.model.constraint,message:om_hospital.constraint_om_hospital_doctors_phone_unique
+#: model:ir.model.constraint,message:om_hospital.constraint_om_hospital_patients_phone_patient_unique
+#, python-format
+msgid "The phone number must be unique"
+msgstr "رقم الهاتف مستخدام"
+
+#. module: om_hospital
+#: model_terms:ir.ui.view,arch_db:om_hospital.doctors_search
+msgid "User"
+msgstr "المستخدم"
